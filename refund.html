@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+   <head>
+      <style>
+         * {
+           box-sizing: border-box;
+         }
+         
+         .row:after {
+           content: "";
+           display: table;
+           clear: both;
+         }
+
+         .container {
+            border-radius: 10px;
+            background-color: #ecf0f1;
+            padding: 20px;
+            height: 500px;
+            width: 500px;
+            text-align: left;
+            margin-left: 450px;
+         }
+
+         .col-25 {
+            float: left;
+            width: 25%;
+            margin-top: 6px;
+         }
+
+         .col-75 {
+            float: left;
+            width: 75%;
+            margin-top: 6px;
+         }
+
+         input[type=submit] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            float: center;
+            align-items: center;
+         }
+
+         input[type=reset] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+         }
+
+         textarea {
+           width: 460px;
+           height: 150px;
+         }
+
+         input[type=submit]:hover {
+           background-color: #45a049;
+         }
+      </style>
+      <title>Text Input Control</title>
+   </head>	
+   <body>
+      <center><h1 style="color:blue;">Refund Request</h1></center>
+      <div class="container">
+         <form method="post" action="email.php">
+            <div class="row">
+               <div class="col-75">
+                  Payment Email ID: <input type="text" id="email" name="email_id" placeholder="Payment Email ID...">
+               </div>
+            </div>
+            <br>
+            <div class="row">
+               <div class="col-75">
+                 Invoice Number: <input type ="text" id="inv_nbr" name="invoice" placeholder="Invoice Number..">
+               </div>
+            </div>
+            <br>
+            <div class="row">
+               <div class="col-75">
+                 Reference Ticket ID: <input type ="email" id="ticket" name="ticket" placeholder="ZenDesk Ticket ID..">
+               </div>
+            </div>
+            <br>
+            <div class="row">
+               <div class="col-75">
+                  Payment Gateway: <select id="Gateway" name="gateway">
+                   <option value="Chargebee">Chargebee</option>
+                   <option value="Avangate">Avangate</option>
+                  </select>
+               </div>
+            </div>
+            <br>
+            <div class="row">
+               <div class="col-75">
+                  Refund Amount: <select> id="Currency" name="currency">
+                  <option value="USD">USD</option>
+                  <option value="EUR">EUR</option>
+                 </select>
+                 <input type = "number" name = "invoice" paceholder="Invoice Number..">
+               </div>
+            </div>
+            <br>
+            <div class="row">
+               <div class="col-75">
+                 Reason(s) for refund: <textarea id="Reason" name="reason" placeholder="Provide reason.."></textarea>
+               </div>
+            </div>
+            <br>
+            <input type="submit" value="Submit">
+            <input type="reset">
+         </form>
+      </div>
+   </body>
+</html>
